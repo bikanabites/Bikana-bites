@@ -1,1 +1,85 @@
+body{
+margin:0;
+font-family:poppins;
+background:#0f0f0f;
+color:white;
+text-align:center;
+}
 
+/* LOGO ANIMATION */
+.logo-anim{
+width:180px;
+animation: zoom 3s infinite ease-in-out;
+}
+
+@keyframes zoom{
+0%{transform:scale(1);}
+50%{transform:scale(1.15);}
+100%{transform:scale(1);}
+}
+
+/* HERO */
+.hero{
+padding:80px 20px;
+}
+
+.hero h1{
+color:#f5c542;
+}
+
+.hero h2{
+font-size:50px;
+}
+
+/* BUTTON ANIMATION */
+.btn-animate{
+display:inline-block;
+padding:12px 25px;
+background:#25D366;
+color:white;
+border-radius:30px;
+text-decoration:none;
+margin-top:20px;
+animation: slide 2s infinite;
+}
+
+@keyframes slide{
+0%{transform:translateX(0);}
+50%{transform:translateX(10px);}
+100%{transform:translateX(0);}
+}
+
+/* SOCIAL ICONS */
+.social{
+margin-top:40px;
+}
+
+.social a{
+font-size:28px;
+margin:10px;
+color:white;
+transition:0.3s;
+}
+
+.social a:hover{
+color:#f5c542;
+transform:scale(1.2);
+}
+
+/* DISTRIBUTOR */
+.distributor{
+margin-top:60px;
+padding:40px;
+background:#1a1a1a;
+}
+
+.dist-btn{
+display:inline-block;
+margin-top:15px;
+padding:12px 30px;
+background:gold;
+color:black;
+border-radius:25px;
+text-decoration:none;
+animation: slide 1.5s infinite;
+}
