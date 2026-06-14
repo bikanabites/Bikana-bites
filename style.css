@@ -1,286 +1,192 @@
-/* Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
+/* RESET */
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
+    font-family: Arial, sans-serif;
 }
 
-html{
-    scroll-behavior:smooth;
-}
-
+/* BODY BACKGROUND (Royal texture feel) */
 body{
-    background:#fffdf7;
-    color:#333;
-    line-height:1.6;
+    background: #fff6e5;
+    color:#2b1b12;
 }
 
-/* Header */
-header{
-    position:fixed;
-    top:0;
-    width:100%;
-    background:#ffffff;
-    box-shadow:0 2px 10px rgba(0,0,0,0.08);
-    z-index:1000;
-}
-
+/* NAVBAR */
 .navbar{
-    max-width:1200px;
-    margin:auto;
-    padding:15px 20px;
     display:flex;
     justify-content:space-between;
     align-items:center;
+    padding:15px 40px;
+    background: linear-gradient(90deg, #8b0000, #d4af37);
+    position:sticky;
+    top:0;
 }
 
 .logo img{
-    height:65px;
+    height:60px;
 }
 
 .nav-links{
-    display:flex;
     list-style:none;
-    gap:30px;
+    display:flex;
+    gap:20px;
 }
 
 .nav-links a{
+    color:white;
     text-decoration:none;
-    color:#333;
-    font-weight:600;
-    transition:.3s;
+    font-weight:bold;
 }
 
-.nav-links a:hover{
-    color:#d4a017;
-}
-
-/* Hero Section */
+/* HERO */
 .hero{
-    min-height:100vh;
+    height:85vh;
     display:flex;
     align-items:center;
     justify-content:center;
     text-align:center;
-    padding:120px 20px 60px;
-    background:linear-gradient(
-        rgba(255,253,247,0.92),
-        rgba(255,253,247,0.92)
-    );
+    background: url("images/rajasthani-bg.jpg");
+    background-size:cover;
+    background-position:center;
+    position:relative;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    top:0;left:0;
+    width:100%;height:100%;
+    background: rgba(0,0,0,0.55);
 }
 
 .hero-content{
-    max-width:700px;
+    position:relative;
+    color:white;
 }
 
 .hero h1{
-    font-size:3rem;
-    color:#d4a017;
+    font-size:40px;
+    color:#ffd700;
 }
 
 .hero h2{
-    font-size:4rem;
-    color:#8b0000;
-    margin-bottom:15px;
-}
-
-.hero p{
-    font-size:1.1rem;
-    margin-bottom:30px;
+    font-size:60px;
+    color:#fff;
 }
 
 .btn{
     display:inline-block;
-    background:#d4a017;
-    color:#fff;
+    margin-top:15px;
+    padding:12px 25px;
+    background:#d4af37;
+    color:#000;
+    font-weight:bold;
+    border-radius:30px;
     text-decoration:none;
-    padding:14px 30px;
-    border-radius:40px;
-    font-weight:600;
-    transition:.3s;
 }
 
-.btn:hover{
-    transform:translateY(-3px);
-    background:#b88900;
-}
-
-/* Sections */
-section{
-    padding:80px 20px;
-}
-
+/* SECTIONS */
 .section-title{
     text-align:center;
-    margin-bottom:50px;
+    margin:50px 0 20px;
 }
 
 .section-title h2{
-    font-size:2.4rem;
     color:#8b0000;
+    font-size:30px;
 }
 
-.section-title p{
-    color:#666;
-}
-
-/* Products */
+/* PRODUCTS */
 .product-grid{
-    max-width:1100px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:30px;
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+    padding:20px;
 }
 
 .product-card{
-    background:#fff;
-    border-radius:20px;
+    width:260px;
+    background:white;
+    border-radius:15px;
     overflow:hidden;
-    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    border-top:4px solid #d4af37;
     text-align:center;
-    transition:.3s;
-}
-
-.product-card:hover{
-    transform:translateY(-10px);
 }
 
 .product-card img{
     width:100%;
-    height:350px;
-    object-fit:contain;
-    padding:20px;
+    height:180px;
+    object-fit:cover;
 }
 
 .product-card h3{
     color:#8b0000;
-    margin-bottom:10px;
 }
 
-.product-card p{
-    padding:0 20px 25px;
-    color:#666;
-}
-
-/* About */
-.about{
-    background:#fff8e8;
-}
-
+/* ABOUT */
 .about-text{
-    max-width:900px;
+    max-width:800px;
     margin:auto;
     text-align:center;
-    font-size:1.1rem;
+    padding:20px;
+    font-size:18px;
 }
 
-/* Why Choose Us */
+/* WHY US */
 .features{
-    max-width:1100px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:25px;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    padding:20px;
 }
 
 .feature-box{
     background:#fff;
-    padding:35px;
+    padding:20px;
+    width:200px;
     text-align:center;
-    border-radius:20px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    border-radius:12px;
+    border-bottom:4px solid #d4af37;
 }
 
 .feature-box i{
-    font-size:40px;
-    color:#d4a017;
-    margin-bottom:15px;
+    font-size:30px;
+    color:#8b0000;
 }
 
-/* Contact */
+/* CONTACT */
 .social-links{
     display:flex;
     justify-content:center;
-    gap:25px;
+    gap:20px;
+    font-size:25px;
 }
 
 .social-links a{
-    width:60px;
-    height:60px;
-    border-radius:50%;
-    background:#fff;
     color:#8b0000;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:26px;
-    text-decoration:none;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
-    transition:.3s;
 }
 
-.social-links a:hover{
-    transform:translateY(-5px);
-}
-
-/* Footer */
+/* FOOTER */
 footer{
     background:#8b0000;
-    color:#fff;
+    color:white;
     text-align:center;
-    padding:25px 20px;
+    padding:15px;
+    margin-top:30px;
 }
 
-/* Floating WhatsApp */
+/* WHATSAPP FLOAT */
 .floating-whatsapp{
     position:fixed;
-    bottom:25px;
-    right:25px;
-    width:65px;
-    height:65px;
+    bottom:20px;
+    right:20px;
+    background:#25d366;
+    color:white;
+    font-size:28px;
+    padding:15px;
     border-radius:50%;
-    background:#25D366;
-    color:#fff;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-decoration:none;
-    font-size:32px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.25);
-    z-index:1000;
-}
-
-/* Responsive */
-@media(max-width:768px){
-
-    .navbar{
-        flex-direction:column;
-        gap:15px;
-    }
-
-    .nav-links{
-        gap:15px;
-        flex-wrap:wrap;
-        justify-content:center;
-    }
-
-    .hero h1{
-        font-size:2.2rem;
-    }
-
-    .hero h2{
-        font-size:2.8rem;
-    }
-
-    .logo img{
-        height:55px;
-    }
-
-    .product-card img{
-        height:280px;
-    }
 }
