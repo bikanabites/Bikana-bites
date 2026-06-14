@@ -1,0 +1,286 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#fffdf7;
+    color:#333;
+    line-height:1.6;
+}
+
+/* Header */
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:#ffffff;
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+    z-index:1000;
+}
+
+.navbar{
+    max-width:1200px;
+    margin:auto;
+    padding:15px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo img{
+    height:65px;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#333;
+    font-weight:600;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#d4a017;
+}
+
+/* Hero Section */
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:120px 20px 60px;
+    background:linear-gradient(
+        rgba(255,253,247,0.92),
+        rgba(255,253,247,0.92)
+    );
+}
+
+.hero-content{
+    max-width:700px;
+}
+
+.hero h1{
+    font-size:3rem;
+    color:#d4a017;
+}
+
+.hero h2{
+    font-size:4rem;
+    color:#8b0000;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:1.1rem;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    background:#d4a017;
+    color:#fff;
+    text-decoration:none;
+    padding:14px 30px;
+    border-radius:40px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    background:#b88900;
+}
+
+/* Sections */
+section{
+    padding:80px 20px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    font-size:2.4rem;
+    color:#8b0000;
+}
+
+.section-title p{
+    color:#666;
+}
+
+/* Products */
+.product-grid{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.product-card{
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    text-align:center;
+    transition:.3s;
+}
+
+.product-card:hover{
+    transform:translateY(-10px);
+}
+
+.product-card img{
+    width:100%;
+    height:350px;
+    object-fit:contain;
+    padding:20px;
+}
+
+.product-card h3{
+    color:#8b0000;
+    margin-bottom:10px;
+}
+
+.product-card p{
+    padding:0 20px 25px;
+    color:#666;
+}
+
+/* About */
+.about{
+    background:#fff8e8;
+}
+
+.about-text{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    font-size:1.1rem;
+}
+
+/* Why Choose Us */
+.features{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.feature-box{
+    background:#fff;
+    padding:35px;
+    text-align:center;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.feature-box i{
+    font-size:40px;
+    color:#d4a017;
+    margin-bottom:15px;
+}
+
+/* Contact */
+.social-links{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+}
+
+.social-links a{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:#fff;
+    color:#8b0000;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:26px;
+    text-decoration:none;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:.3s;
+}
+
+.social-links a:hover{
+    transform:translateY(-5px);
+}
+
+/* Footer */
+footer{
+    background:#8b0000;
+    color:#fff;
+    text-align:center;
+    padding:25px 20px;
+}
+
+/* Floating WhatsApp */
+.floating-whatsapp{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    background:#25D366;
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration:none;
+    font-size:32px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.25);
+    z-index:1000;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .nav-links{
+        gap:15px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:2.2rem;
+    }
+
+    .hero h2{
+        font-size:2.8rem;
+    }
+
+    .logo img{
+        height:55px;
+    }
+
+    .product-card img{
+        height:280px;
+    }
+}
