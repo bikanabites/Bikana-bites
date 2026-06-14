@@ -37,8 +37,11 @@ header{
     align-items:center;
 }
 
-.logo img{
-    height:65px;
+.logo-img{
+    width: 180px;   /* बड़ा करने के लिए */
+    height: auto;
+    object-fit: contain;
+}
 }
 
 .nav-links{
