@@ -1,134 +1,105 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BIKANA BITES | हर दिल बोले</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bikana Bytes | हर दिल बोले</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for Social Media Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Marcellus&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header>
-    <div class="brand">
-        <img src="logo.png" alt="BIKANA BITES" class="logo">
-
-        <div class="tagline">
-            हर दिल बोले
+    <!-- Header -->
+    <header>
+        <div class="logo-container">
+            <!-- यहाँ आप अपनी इमेज '18872.png' इस्तेमाल करेंगे -->
+            <img src="18872.png" alt="Bikana Bytes Logo" class="brand-logo">
         </div>
-    </div>
+        <nav>
+            <a href="#home">होम</a>
+            <a href="#about">हमारे बारे में</a>
+            <a href="#products">प्रोडक्ट्स</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScxN6S3k9-yuBrrgm5EWKwWWtQI-8p-zU1EHZsdSPZreHEzlw/viewform?usp=sharing&ouid=114795546334251401384" target="_blank" class="btn-nav">डिस्ट्रीब्यूटर फॉर्म</a>
+        </nav>
+    </header>
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#products">Products</a>
-        <a href="#distributor">Distributor</a>
-        <a href="#contact">Contact</a>
-    </nav>
-</header>
-
-<section class="hero" id="home">
-    <div class="hero-content">
-        <h1>BIKANA BITES</h1>
-        <h2>हर दिल बोले</h2>
-
-        <p>
-            Premium Taste • Traditional Quality • Trusted Snacks
-        </p>
-
-        <a href="#products" class="btn">
-            Explore Products
-        </a>
-    </div>
-</section>
-
-<section id="products" class="section">
-    <h2 class="section-title">
-        Our Products
-    </h2>
-
-    <div class="products">
-
-        <div class="card">
-            <img src="moongdal.jpg" alt="Moong Dal">
-
-            <div class="card-content">
-                <h3>Moong Dal</h3>
-                <p>Crispy & Delicious Premium Moong Dal</p>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2 class="tagline">"हर दिल बोले"</h2>
+            <h1>परंपरा का असली स्वाद, <br><span class="highlight">आधुनिक अंदाज में।</span></h1>
+            <p>बीकाणा बाइट्स आपके लिए लाया है बेहतरीन और क्रिस्पी स्नैक्स की एक नई रेंज।</p>
+            <div class="hero-buttons">
+                <a href="#products" class="btn-primary">प्रोडक्ट्स देखें</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScxN6S3k9-yuBrrgm5EWKwWWtQI-8p-zU1EHZsdSPZreHEzlw/viewform?usp=sharing&ouid=114795546334251401384" target="_blank" class="btn-secondary">पार्टनर बनें</a>
             </div>
         </div>
+    </section>
 
-        <div class="card">
-            <img src="bhujia.jpg" alt="Bhujia">
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>प्रीमियम पैकेजिंग. बेहतरीन स्वाद.</h2>
+        <p>स्वाद बीकानेर का और क्वालिटी एकदम इंटरनेशनल। हमारी नई और आई-कैची पैकेजिंग न सिर्फ स्वाद को फ्रेश रखती है, बल्कि आपकी टेबल की रौनक भी बढ़ाती है।</p>
+    </section>
 
-            <div class="card-content">
-                <h3>Khokha Bhujia</h3>
-                <p>Authentic Bikaneri Taste</p>
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <h2>हमारे खास बाइट्स</h2>
+        <div class="product-grid">
+            
+            <!-- Product 1: Khokha Bhujia -->
+            <div class="product-card">
+                <div class="product-img-wrapper">
+                    <!-- यहाँ आपकी इमेज '18881.jpg' दिखेगी -->
+                    <img src="18881.jpg" alt="Khokha Bhujia" class="p-img">
+                </div>
+                <h3>Khokha Bhujia (खोखा भुजिया)</h3>
+                <p>फाइन बेसन और बेहतरीन मसालों से बनी क्रिस्पी और चटपटी भुजिया।</p>
+                <span class="price">मात्र ₹10/-</span>
+            </div>
+
+            <!-- Product 2: Moong Dal -->
+            <div class="product-card">
+                <div class="product-img-wrapper">
+                    <!-- यहाँ आपकी इमेज '18880.jpg' दिखेगी -->
+                    <img src="18880.jpg" alt="Moong Dal" class="p-img">
+                </div>
+                <h3>Moong Dal (मूंग दाल)</h3>
+                <p>हल्की, क्रंची और नमकीन। हर वक्त की भूख का परफेक्ट साथी।</p>
+                <span class="price">मात्र ₹10/-</span>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Call to Action / Distributor Pitch -->
+    <section class="cta-section">
+        <h2>क्या आप हमारे साथ बिजनेस करना चाहते हैं?</h2>
+        <p>बीकाणा बाइट्स के डिस्ट्रीब्यूटर बनने के लिए नीचे दिए गए बटन पर क्लिक करके गूगल फॉर्म भरें।</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScxN6S3k9-yuBrrgm5EWKwWWtQI-8p-zU1EHZsdSPZreHEzlw/viewform?usp=sharing&ouid=114795546334251401384" target="_blank" class="btn-google-form">
+            <i class="fab fa-google"></i> डिस्ट्रीब्यूटर फॉर्म खोलें
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>Bikana Bytes</h3>
+                <p><i class="fas fa-phone"></i> +91 9358500110</p>
+                <p><i class="fas fa-envelope"></i> bikanabites@gmail.com</p>
+            </div>
+            <div class="footer-socials">
+                <h3>हमसे जुड़ें</h3>
+                <a href="https://www.facebook.com/share/1Cv9bjiqWW/" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/bikanabites?igsh=MWY5MWEzeTNwaHVmMg==" target="_blank"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
-
-    </div>
-</section>
-
-<section id="distributor" class="section">
-
-    <div class="distributor">
-
-        <h2>Distributor बनें</h2>
-
-        <p>
-            BIKANA BITES के साथ जुड़कर अपना व्यापार बढ़ाएँ।
-        </p>
-
-        <a
-        href="https://docs.google.com/forms/d/e/1FAIpQLScxN6S3k9-yuBrrgm5EWKwWWtQI-8p-zU1EHZsdSPZreHEzlw/viewform"
-        target="_blank"
-        class="btn">
-
-        Distributor Form
-
-        </a>
-
-    </div>
-
-</section>
-
-<section id="contact" class="section contact">
-
-    <h2 class="section-title">
-        Contact Us
-    </h2>
-
-    <p>
-        Email: bikanabites@gmail.com
-    </p>
-
-    <p>
-        Phone: +91 9258500110
-    </p>
-
-    <div class="social">
-
-        <a href="https://www.facebook.com/share/18vbSTshhq/" target="_blank">
-            <i class="fab fa-facebook-f"></i>
-        </a>
-
-        <a href="https://www.instagram.com/bikanabites?igsh=MWY5MWEzeTNwaHVmMg==" target="_blank">
-            <i class="fab fa-instagram"></i>
-        </a>
-
-        <a href="https://wa.me/919258500110" target="_blank">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-
-    </div>
-
-</section>
-
-<script src="script.js"></script>
+        <hr class="footer-line">
+        <p class="copy">&copy; 2026 Bikana Bytes. सभी अधिकार सुरक्षित।</p>
+    </footer>
 
 </body>
 </html>
