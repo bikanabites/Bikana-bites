@@ -4,154 +4,385 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>BIKANA BITES | Royal Taste of Rajasthan</title>
-
-<meta name="description" content="Discover the royal authentic taste of BIKANA BITES - Premium Rajasthani namkeen.">
-
-<link rel="stylesheet" href="style.css">
+<title>BIKANA BITES | Har Dil Bole</title>
 
 <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#fff9f0;
+color:#222;
+}
+
+/* HEADER */
+
+header{
+background:linear-gradient(135deg,#b80f0a,#d71920);
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+text-align:center;
+padding:20px;
+overflow:hidden;
+}
+
+.logo{
+width:420px;
+max-width:90%;
+animation:zoom 3s infinite ease-in-out;
+filter:drop-shadow(0 15px 30px rgba(0,0,0,.25));
+}
+
+@keyframes zoom{
+0%,100%{transform:scale(1);}
+50%{transform:scale(1.08);}
+}
+
+header h1{
+font-size:70px;
+color:#ffd54a;
+margin-top:20px;
+font-weight:800;
+}
+
+.tagline{
+font-size:34px;
+color:white;
+margin-top:10px;
+font-weight:600;
+}
+
+.hero-text{
+color:#fff;
+font-size:20px;
+margin-top:15px;
+max-width:700px;
+line-height:1.6;
+}
+
+.cta{
+margin-top:30px;
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.btn{
+padding:15px 30px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.btn-gold{
+background:#ffd54a;
+color:#b80f0a;
+}
+
+.btn-white{
+background:white;
+color:#b80f0a;
+}
+
+/* PRODUCTS */
+
+.section{
+padding:80px 8%;
+}
+
+.section-title{
+text-align:center;
+font-size:42px;
+color:#b80f0a;
+margin-bottom:50px;
+}
+
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:35px;
+}
+
+.card{
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card img{
+width:100%;
+height:450px;
+object-fit:cover;
+}
+
+.card h3{
+padding:20px;
+font-size:30px;
+text-align:center;
+color:#b80f0a;
+}
+
+/* ABOUT */
+
+.about{
+background:#fff3d6;
+text-align:center;
+}
+
+.about p{
+max-width:900px;
+margin:auto;
+font-size:20px;
+line-height:1.8;
+}
+
+/* FORM */
+
+.form-section{
+background:linear-gradient(135deg,#d71920,#b80f0a);
+color:white;
+}
+
+.form-box{
+max-width:800px;
+margin:auto;
+}
+
+input,textarea{
+width:100%;
+padding:15px;
+margin-bottom:15px;
+border:none;
+border-radius:10px;
+}
+
+button{
+width:100%;
+padding:16px;
+border:none;
+border-radius:10px;
+background:#ffd54a;
+color:#b80f0a;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+}
+
+/* SOCIAL */
+
+.social{
+text-align:center;
+padding:70px 20px;
+}
+
+.social a{
+display:inline-block;
+margin:10px;
+padding:15px 25px;
+border-radius:50px;
+background:#b80f0a;
+color:white;
+text-decoration:none;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+position:fixed;
+right:20px;
+bottom:20px;
+width:65px;
+height:65px;
+background:#25d366;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:35px;
+color:white;
+text-decoration:none;
+box-shadow:0 0 20px rgba(0,0,0,.3);
+}
+
+/* FOOTER */
+
+footer{
+background:#8f0c08;
+color:white;
+text-align:center;
+padding:25px;
+}
+
+@media(max-width:768px){
+
+header h1{
+font-size:42px;
+}
+
+.tagline{
+font-size:24px;
+}
+
+.logo{
+width:280px;
+}
+
+}
+
+</style>
 </head>
 
 <body>
 
 <header>
-    <nav class="navbar">
 
-        <div class="logo">
-            <img src="images/logo.png" alt="BIKANA BITES Logo">
-        </div>
+<img src="logo.jpg" class="logo">
 
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#products">Products</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+<h1>BIKANA BITES</h1>
 
-    </nav>
+<div class="tagline">
+Har Dil Bole
+</div>
+
+<p class="hero-text">
+Premium Namkeen & Snacks crafted with authentic Indian taste.
+Bringing quality, freshness and flavor in every bite.
+</p>
+
+<div class="cta">
+
+<a href="#products" class="btn btn-gold">
+View Products
+</a>
+
+<a href="#distributor" class="btn btn-white">
+Become Distributor
+</a>
+
+</div>
+
 </header>
 
-<section class="hero" id="home">
+<section class="section about">
 
-    <div class="hero-content">
+<h2 class="section-title">About Us</h2>
 
-        <h1>Har Dil Bole...</h1>
-        <h2>BIKANA BITES</h2>
-
-        <p>
-            Royal taste of Rajasthan with authentic spices and premium quality snacks.
-        </p>
-
-        <a href="https://wa.me/919358500110" class="btn" target="_blank">
-            Order on WhatsApp
-        </a>
-
-    </div>
+<p>
+BIKANA BITES delivers authentic Indian namkeen and snacks with
+premium quality and unmatched taste. Our mission is to bring
+traditional flavors to every home with consistency, trust and
+customer satisfaction.
+</p>
 
 </section>
 
-<section class="products" id="products">
+<section class="section" id="products">
 
-    <div class="section-title">
-        <h2>Our Royal Products</h2>
-        <p>Tradition + Taste = Bikaner Heritage</p>
-    </div>
+<h2 class="section-title">Our Products</h2>
 
-    <div class="product-grid">
+<div class="products">
 
-        <div class="product-card">
-            <img src="images/moong-dal.png" alt="Moong Dal">
-            <h3>Moong Dal</h3>
-            <p>Crispy golden roasted traditional snack.</p>
-        </div>
+<div class="card">
+<img src="moongdal.jpg">
+<h3>Moong Dal</h3>
+</div>
 
-        <div class="product-card">
-            <img src="images/khokha-bhujia.png" alt="Bhujia">
-            <h3>Khokha Bhujia</h3>
-            <p>Authentic spicy Rajasthani flavour.</p>
-        </div>
+<div class="card">
+<img src="khokhabhujia.jpg">
+<h3>Khokha Bhujia</h3>
+</div>
 
-    </div>
+</div>
 
 </section>
 
-<section class="about" id="about">
+<section class="section form-section" id="distributor">
 
-    <div class="section-title">
-        <h2>About Us</h2>
-    </div>
+<div class="form-box">
 
-    <p class="about-text">
-        BIKANA BITES brings you the royal heritage taste of Bikaner.
-        Made with premium ingredients and traditional recipes passed through generations.
-    </p>
+<h2 class="section-title" style="color:white;">
+Distributor Enquiry
+</h2>
 
-</section>
+<form>
 
-<section class="why-us">
+<input type="text" placeholder="Full Name">
 
-    <div class="section-title">
-        <h2>Why Choose Us</h2>
-    </div>
+<input type="text" placeholder="Firm Name">
 
-    <div class="features">
+<input type="tel" placeholder="Mobile Number">
 
-        <div class="feature-box">
-            <i class="fa-solid fa-award"></i>
-            <h3>Royal Quality</h3>
-        </div>
+<input type="text" placeholder="City">
 
-        <div class="feature-box">
-            <i class="fa-solid fa-heart"></i>
-            <h3>Authentic Taste</h3>
-        </div>
+<input type="text" placeholder="State">
 
-        <div class="feature-box">
-            <i class="fa-solid fa-box"></i>
-            <h3>Fresh Packaging</h3>
-        </div>
+<textarea rows="5"
+placeholder="Tell us about your business"></textarea>
 
-        <div class="feature-box">
-            <i class="fa-solid fa-star"></i>
-            <h3>Trusted Brand</h3>
-        </div>
+<button type="submit">
+Submit Enquiry
+</button>
 
-    </div>
+</form>
+
+</div>
 
 </section>
 
-<section class="contact" id="contact">
+<section class="social">
 
-    <div class="section-title">
-        <h2>Contact Us</h2>
-    </div>
+<h2 class="section-title">
+Connect With Us
+</h2>
 
-    <div class="social-links">
+<a href="tel:9358500110">
+📞 Call Us
+</a>
 
-        <a href="https://www.instagram.com/bikanabites" target="_blank">
-            <i class="fa-brands fa-instagram"></i>
-        </a>
+<a href="mailto:bikanabites@gmail.com">
+✉ Email
+</a>
 
-        <a href="https://www.facebook.com/share/1BZALqN2HM/" target="_blank">
-            <i class="fa-brands fa-facebook"></i>
-        </a>
+<a href="https://www.instagram.com/bikanabites">
+📷 Instagram
+</a>
 
-        <a href="https://wa.me/919358500110" target="_blank">
-            <i class="fa-brands fa-whatsapp"></i>
-        </a>
-
-    </div>
+<a href="https://www.facebook.com/share/1M3A5LWwcY/">
+👍 Facebook
+</a>
 
 </section>
 
 <footer>
-    <p>© 2026 BIKANA BITES | Royal Taste of Rajasthan</p>
+
+© 2026 BIKANA BITES • Har Dil Bole
+
 </footer>
 
-<a href="https://wa.me/919358500110" class="floating-whatsapp" target="_blank">
-    <i class="fa-brands fa-whatsapp"></i>
+<a href="https://wa.me/919358500110"
+class="whatsapp">
+
+<i class="fab fa-whatsapp"></i>
+
 </a>
 
 </body>
