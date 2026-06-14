@@ -1,49 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
 <meta charset="UTF-8">
-<title>BIKANA BITES</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BIKANA BITES | हर दिल बोले</title>
 
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-</head>
 
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
 <body>
 
-<!-- HERO -->
-<section class="hero">
+<header>
+    <div class="brand">
+        <img src="logo.png" alt="BIKANA BITES" class="logo">
 
-    <div class="logo-box">
-        <img src="logo.png" class="logo-anim">
+        <div class="tagline">
+            हर दिल बोले
+        </div>
     </div>
 
-    <h1>Har Dil Bole...</h1>
-    <h2>BIKANA BITES</h2>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#distributor">Distributor</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
 
-    <p>Authentic Taste of Bikaner</p>
+<section class="hero" id="home">
+    <div class="hero-content">
+        <h1>BIKANA BITES</h1>
+        <h2>हर दिल बोले</h2>
 
-    <a href="https://wa.me/919358500110" class="btn-animate">
-        Order on WhatsApp
-    </a>
+        <p>
+            Premium Taste • Traditional Quality • Trusted Snacks
+        </p>
+
+        <a href="#products" class="btn">
+            Explore Products
+        </a>
+    </div>
+</section>
+
+<section id="products" class="section">
+    <h2 class="section-title">
+        Our Products
+    </h2>
+
+    <div class="products">
+
+        <div class="card">
+            <img src="moongdal.jpg" alt="Moong Dal">
+
+            <div class="card-content">
+                <h3>Moong Dal</h3>
+                <p>Crispy & Delicious Premium Moong Dal</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="bhujia.jpg" alt="Bhujia">
+
+            <div class="card-content">
+                <h3>Khokha Bhujia</h3>
+                <p>Authentic Bikaneri Taste</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="distributor" class="section">
+
+    <div class="distributor">
+
+        <h2>Distributor बनें</h2>
+
+        <p>
+            BIKANA BITES के साथ जुड़कर अपना व्यापार बढ़ाएँ।
+        </p>
+
+        <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLScxN6S3k9-yuBrrgm5EWKwWWtQI-8p-zU1EHZsdSPZreHEzlw/viewform"
+        target="_blank"
+        class="btn">
+
+        Distributor Form
+
+        </a>
+
+    </div>
 
 </section>
 
-<!-- SOCIAL ICONS -->
-<div class="social">
-    <a href="https://www.instagram.com/bikanabites"><i class="fa-brands fa-instagram"></i></a>
-    <a href="https://wa.me/919358500110"><i class="fa-brands fa-whatsapp"></i></a>
-    <a href="https://www.facebook.com/share/1BZALqN2HM/"><i class="fa-brands fa-facebook"></i></a>
-</div>
+<section id="contact" class="section contact">
 
-<!-- DISTRIBUTOR -->
-<section class="distributor">
-    <h2>Become a Distributor</h2>
-    <p>Join BIKANA BITES Family</p>
+    <h2 class="section-title">
+        Contact Us
+    </h2>
 
-    <a href="https://forms.gle/8GPiHrj9TsXEz1jW8" class="dist-btn">
-        Apply Now
-    </a>
+    <p>
+        Email: bikanabites@gmail.com
+    </p>
+
+    <p>
+        Phone: +91 9258500110
+    </p>
+
+    <div class="social">
+
+        <a href="https://www.facebook.com/share/18vbSTshhq/" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <a href="https://www.instagram.com/bikanabites?igsh=MWY5MWEzeTNwaHVmMg==" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="https://wa.me/919258500110" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+
+    </div>
+
 </section>
+
+<script src="script.js"></script>
 
 </body>
 </html>
