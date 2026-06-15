@@ -4,40 +4,37 @@
 <head>
 
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
-
-<title>
-Bikana Bites - Authentic Taste of Bikaner
-</title>
+<title>Bikana Bites - Authentic Taste of Bikaner</title>
 
 <link rel="stylesheet" href="style.css">
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-</head>
 <script src="https://accounts.google.com/gsi/client" async></script>
 
-<div id="g_id_onload"
-data-client_id="620256732057-r1vnji5d9oqt817cebsksdeetbi69aj0.apps.googleusercontent.com"
-data-callback="handleCredentialResponse">
-</div>
+<style>
 
-<div class="g_id_signin"></div>
-
-<script>
-function handleCredentialResponse(response) {
-  console.log(response);
-
-  alert("Login Successful");
-
-  localStorage.setItem("userLoggedIn","true");
-
-  window.location.href="/";
+#loginBtn{
+background:#d71920;
+color:#fff;
+border:none;
+padding:10px 18px;
+border-radius:30px;
+font-weight:700;
+cursor:pointer;
 }
-</script>
+
+#loginBtn i{
+margin-right:8px;
+}
+
+</style>
+
+</head>
+
 <body>
 
 <header>
@@ -61,6 +58,14 @@ function handleCredentialResponse(response) {
 <li><a href="contact.html">Contact</a></li>
 
 <li>
+<button id="loginBtn">
+<i class="fa-brands fa-google"></i>
+Login
+</button>
+</li>
+
+<li>
+
 <a href="cart.html">
 
 <i class="fas fa-shopping-cart"></i>
@@ -68,6 +73,7 @@ function handleCredentialResponse(response) {
 <span id="cart-count">0</span>
 
 </a>
+
 </li>
 
 </ul>
@@ -76,13 +82,9 @@ function handleCredentialResponse(response) {
 
 </header>
 
-
-
 <section class="hero-banner">
 
-<img
-src="factory.jpg"
-alt="Bikana Bites Factory">
+<img src="factory.jpg" alt="Bikana Bites Factory">
 
 <div class="hero-overlay">
 
@@ -97,20 +99,12 @@ Tradition & Trust
 
 <div class="hero-btns">
 
-<a
-href="products.html"
-class="btn-red">
-
+<a href="products.html" class="btn-red">
 Shop Now
-
 </a>
 
-<a
-href="distributor.html"
-class="btn-gold">
-
+<a href="distributor.html" class="btn-gold">
 Become Distributor
-
 </a>
 
 </div>
@@ -118,8 +112,6 @@ Become Distributor
 </div>
 
 </section>
-
-
 
 <section class="features">
 
@@ -145,13 +137,9 @@ Become Distributor
 
 </section>
 
-
-
 <section class="best-sellers">
 
-<h2>
-Best Selling Products
-</h2>
+<h2>Best Selling Products</h2>
 
 <div class="product-grid">
 
@@ -161,17 +149,13 @@ Best Selling Products
 
 <h3>Khokha Bhujia</h3>
 
-<p class="price">
-₹10
-</p>
+<p class="price">₹10</p>
 
-<button
-onclick="addToCart('Khokha Bhujia',10)">
+<button onclick="addToCart('Khokha Bhujia',10)">
 Add To Cart
 </button>
 
-<button
-class="whatsapp"
+<button class="whatsapp"
 onclick="buyWhatsApp('Khokha Bhujia')">
 
 Buy On WhatsApp
@@ -180,25 +164,19 @@ Buy On WhatsApp
 
 </div>
 
-
-
 <div class="product-card">
 
 <img src="moong-dal.png">
 
 <h3>Moong Dal</h3>
 
-<p class="price">
-₹10
-</p>
+<p class="price">₹10</p>
 
-<button
-onclick="addToCart('Moong Dal',10)">
+<button onclick="addToCart('Moong Dal',10)">
 Add To Cart
 </button>
 
-<button
-class="whatsapp"
+<button class="whatsapp"
 onclick="buyWhatsApp('Moong Dal')">
 
 Buy On WhatsApp
@@ -211,46 +189,15 @@ Buy On WhatsApp
 
 </section>
 
-
-
-<section class="distributor-banner">
-
-<h2>
-Become A Bikana Bites Distributor
-</h2>
-
-<p>
-Join Our Growing Distribution Network Across India.
-</p>
-
-<a
-href="distributor.html"
-class="btn-red">
-
-Apply Now
-
-</a>
-
-</section>
-
-
-
-<!-- FOLLOW US FIX -->
-
 <section class="social">
 
-<h2>
-Follow Us
-</h2>
+<h2>Follow Us</h2>
 
 <div class="social-links">
 
 <a
 href="https://www.instagram.com/bikanabites"
-class="instagram"
 target="_blank">
-
-<i class="fa-brands fa-instagram"></i>
 
 Instagram
 
@@ -258,10 +205,7 @@ Instagram
 
 <a
 href="https://www.facebook.com/share/1BfgCDkP4a/"
-class="facebook"
 target="_blank">
-
-<i class="fa-brands fa-facebook-f"></i>
 
 Facebook
 
@@ -271,31 +215,19 @@ Facebook
 
 </section>
 
-
-
 <footer>
 
 <div class="footer-content">
 
-<h3>
-BIKANA BITES
-</h3>
+<h3>BIKANA BITES</h3>
 
-<p>
-WhatsApp:
-+91 9358500110
-</p>
+<p>WhatsApp: +91 9358500110</p>
 
-<p>
-Email:
-bikanabites@gmail.com
-</p>
+<p>Email: bikanabites@gmail.com</p>
 
 </div>
 
 </footer>
-
-
 
 <a
 href="https://wa.me/919358500110"
@@ -305,8 +237,48 @@ class="floating-whatsapp">
 
 </a>
 
+<script>
+
+window.onload=function(){
+
+google.accounts.id.initialize({
+
+client_id:
+"620256732057-r1vnji5d9oqt817cebsksdeetbi69aj0.apps.googleusercontent.com",
+
+callback:handleCredentialResponse
+
+});
+
+document
+.getElementById("loginBtn")
+.onclick=function(){
+
+google.accounts.id.prompt();
+
+};
+
+};
+
+function handleCredentialResponse(response){
+
+localStorage
+.setItem(
+"userLoggedIn",
+"true"
+);
+
+document
+.getElementById(
+"loginBtn"
+).innerHTML=
+"My Account";
+
+}
+
+</script>
+
 <script src="script.js"></script>
 
 </body>
-
 </html>
