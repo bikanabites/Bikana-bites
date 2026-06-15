@@ -18,7 +18,26 @@ Bikana Bites - Authentic Taste of Bikaner
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 </head>
+<script src="https://accounts.google.com/gsi/client" async></script>
 
+<div id="g_id_onload"
+data-client_id="620256732057-r1vnji5d9oqt817cebsksdeetbi69aj0.apps.googleusercontent.com"
+data-callback="handleCredentialResponse">
+</div>
+
+<div class="g_id_signin"></div>
+
+<script>
+function handleCredentialResponse(response) {
+  console.log(response);
+
+  alert("Login Successful");
+
+  localStorage.setItem("userLoggedIn","true");
+
+  window.location.href="/";
+}
+</script>
 <body>
 
 <header>
