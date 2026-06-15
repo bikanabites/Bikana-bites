@@ -1,54 +1,206 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>BIKANA BITES</title>
+<title>Bikana Bites - Authentic Taste of Bikaner</title>
 
 <link rel="stylesheet" href="style.css">
-</head>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+</head>
 <body>
 
-<header class="header">
-  <img src="logo.png" class="logo" alt="BIKANA BITES">
-  <h1>BIKANA BITES</h1>
-  <p>हर दिल बोले BIKANA BITES</p>
+<header>
 
-  <div class="links">
-    <a href="https://www.instagram.com/bikanabites" target="_blank">Instagram</a>
-    <a href="https://www.facebook.com/share/18yJKhMRUz/" target="_blank">Facebook</a>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLScxN6S3k9-yuBrrgm5EWKwWWtQI-8p-zU1EHZsdSPZreHEzlw/viewform" target="_blank">Distributor Form</a>
-  </div>
+<div class="top-logo">
+<img src="logo.png" alt="Bikana Bites">
+</div>
+
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="products.html">Products</a></li>
+<li><a href="about.html">About Us</a></li>
+<li><a href="distributor.html">Distributor</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li>
+<a href="cart.html">
+<i class="fas fa-shopping-cart"></i>
+<span id="cart-count">0</span>
+</a>
+</li>
+</ul>
+</nav>
+
 </header>
 
-<section class="products">
+<section class="hero">
 
-  <div class="card">
-    <img src="khokha-bhujia.png" alt="Bhujia">
-    <h3>Khokha Bhujia</h3>
-    <p>₹10</p>
-    <button onclick="addToCart('Khokha Bhujia',10)">Add to Cart</button>
-  </div>
+<div class="hero-content">
 
-  <div class="card">
-    <img src="moong-dal.png" alt="Moong Dal">
-    <h3>Moong Dal</h3>
-    <p>₹10</p>
-    <button onclick="addToCart('Moong Dal',10)">Add to Cart</button>
-  </div>
+<h1>Authentic Taste Of Bikaner</h1>
+
+<p>
+Premium Namkeen Crafted With Tradition,
+Quality & Taste.
+</p>
+
+<div class="hero-btns">
+
+<a href="products.html" class="btn-red">
+Shop Now
+</a>
+
+<a href="distributor.html" class="btn-gold">
+Become Distributor
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-image">
+<img src="images/hero-products.png">
+</div>
 
 </section>
 
-<div class="cart">
-  <h3>Cart: <span id="count">0</span></h3>
-  <h3>Total: ₹<span id="total">0</span></h3>
+<section class="features">
 
-  <button onclick="orderWhatsApp()">Order on WhatsApp</button>
+<div class="feature-card">
+<h3>Authentic Taste</h3>
+<p>Original Bikaneri Flavor</p>
 </div>
 
-<a class="wa" href="https://wa.me/919358500110" target="_blank">WhatsApp</a>
+<div class="feature-card">
+<h3>Premium Quality</h3>
+<p>Best Ingredients</p>
+</div>
+
+<div class="feature-card">
+<h3>Fresh Products</h3>
+<p>Always Fresh Packaging</p>
+</div>
+
+<div class="feature-card">
+<h3>Affordable Price</h3>
+<p>Starting From ₹10</p>
+</div>
+
+</section>
+
+<section class="best-sellers">
+
+<h2>Best Selling Products</h2>
+
+<div class="product-grid">
+
+<div class="product-card">
+
+<img src="khokha-bhujia.png">
+
+<h3>Khokha Bhujia</h3>
+
+<p class="price">₹10</p>
+
+<button onclick="addToCart('Khokha Bhujia',10)">
+Add To Cart
+</button>
+
+<button class="whatsapp"
+onclick="buyWhatsApp('Khokha Bhujia')">
+Buy On WhatsApp
+</button>
+
+</div>
+
+<div class="product-card">
+
+<img src="moong-dal.png">
+
+<h3>Moong Dal</h3>
+
+<p class="price">₹10</p>
+
+<button onclick="addToCart('Moong Dal',10)">
+Add To Cart
+</button>
+
+<button class="whatsapp"
+onclick="buyWhatsApp('Moong Dal')">
+Buy On WhatsApp
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="distributor-banner">
+
+<h2>
+Become A Bikana Bites Distributor
+</h2>
+
+<p>
+Join Our Growing Distribution Network
+Across India.
+</p>
+
+<a href="distributor.html" class="btn-red">
+Apply Now
+</a>
+
+</section>
+
+<section class="social">
+
+<h2>Follow Us</h2>
+
+<div class="social-links">
+
+<a href="https://www.instagram.com/bikanabites">
+Instagram
+</a>
+
+<a href="https://www.facebook.com/share/192wKHJCAp/">
+Facebook
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+<div class="footer-content">
+
+<h3>BIKANA BITES</h3>
+
+<p>
+WhatsApp:
++91 9358500110
+</p>
+
+<p>
+Email:
+bikanabites@gmail.com
+</p>
+
+</div>
+
+</footer>
+
+<a
+href="https://wa.me/919358500110"
+class="floating-whatsapp">
+
+<i class="fab fa-whatsapp"></i>
+
+</a>
 
 <script src="script.js"></script>
 
