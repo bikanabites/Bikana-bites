@@ -1,16 +1,24 @@
+// ======================
 // CART STORAGE
+// ======================
 
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let cart =
+JSON.parse(
+localStorage.getItem("cart")
+) || [];
 
 updateCartCount();
 
-// ADD TO CART
 
-function addToCart(name, price) {
+// ======================
+// ADD TO CART
+// ======================
+
+function addToCart(name,price){
 
 cart.push({
-name: name,
-price: price
+name,
+price
 });
 
 localStorage.setItem(
@@ -20,59 +28,92 @@ JSON.stringify(cart)
 
 updateCartCount();
 
-alert(name + " added to cart!");
-
-}
-
-// UPDATE CART COUNT
-
-function updateCartCount() {
-
-let count = document.getElementById("cart-count");
-
-if(count){
-
-count.innerText = cart.length;
-
-}
-
-}
-
-// WHATSAPP BUY
-
-function buyWhatsApp(product) {
-
-let message =
-`Hello Bikana Bites,%0A%0AI want to order:%0A${product}%0A%0APlease share details.`;
-
-window.open(
-`https://wa.me/919358500110?text=${message}`,
-"_blank"
+alert(
+name + " added to cart!"
 );
 
 }
 
-// VIEW CART
 
-function renderCart() {
+// ======================
+// CART COUNT
+// ======================
 
-let cartContainer =
-document.getElementById("cart-items");
+function updateCartCount(){
 
-let totalElement =
-document.getElementById("total-price");
+const count =
+document.getElementById(
+"cart-count"
+);
 
-if(!cartContainer) return;
+if(count){
 
-cartContainer.innerHTML = "";
+count.innerText =
+cart.length;
 
-let total = 0;
+}
 
-cart.forEach((item,index)=>{
+}
+
+
+// ======================
+// BUY WHATSAPP
+// ======================
+
+function buyWhatsApp(product){
+
+const msg =
+
+`Hello Bikana Bites,
+
+I want to order:
+
+${product}
+
+Please share details.`;
+
+window.open(
+
+`https://wa.me/919358500110?text=${encodeURIComponent(msg)}`,
+
+"_blank"
+
+);
+
+}
+
+
+// ======================
+// RENDER CART
+// ======================
+
+function renderCart(){
+
+const cartContainer =
+document.getElementById(
+"cart-items"
+);
+
+const totalElement =
+document.getElementById(
+"total-price"
+);
+
+if(!cartContainer)
+return;
+
+cartContainer.innerHTML="";
+
+let total=0;
+
+cart.forEach(
+(item,index)=>{
 
 total += item.price;
 
-cartContainer.innerHTML += `
+cartContainer.innerHTML +=
+
+`
 <div class="cart-item">
 
 <h3>${item.name}</h3>
@@ -86,26 +127,33 @@ Remove
 </div>
 `;
 
-});
+}
+);
 
 if(totalElement){
 
-totalElement.innerText =
-"₹" + total;
+totalElement.innerText=
+"₹"+total;
 
 }
 
 }
 
-// REMOVE ITEM
+
+// ======================
+// REMOVE
+// ======================
 
 function removeItem(index){
 
 cart.splice(index,1);
 
 localStorage.setItem(
+
 "cart",
+
 JSON.stringify(cart)
+
 );
 
 renderCart();
@@ -114,15 +162,21 @@ updateCartCount();
 
 }
 
+
+// ======================
 // CLEAR CART
+// ======================
 
 function clearCart(){
 
-cart = [];
+cart=[];
 
 localStorage.setItem(
+
 "cart",
-JSON.stringify(cart)
+
+"[]"
+
 );
 
 renderCart();
@@ -131,49 +185,118 @@ updateCartCount();
 
 }
 
-// WHATSAPP CHECKOUT
+
+// ======================
+// CHECKOUT
+// ======================
 
 function checkoutWhatsApp(){
 
 if(cart.length===0){
 
-alert("Cart is empty!");
+alert(
+"Cart is empty!"
+);
 
 return;
 
 }
 
-let orderText =
-"Hello Bikana Bites,%0A%0AI want to place an order:%0A%0A";
+let text=
 
-let total = 0;
+"Hello Bikana Bites\n\nOrder:\n\n";
+
+let total=0;
 
 cart.forEach(item=>{
 
-orderText +=
-`${item.name} - ₹${item.price}%0A`;
+text +=
+`${item.name} - ₹${item.price}\n`;
 
-total += item.price;
+total+=item.price;
 
 });
 
-orderText +=
-`%0AOrder Total: ₹${total}`;
+text +=
+`\nTotal ₹${total}`;
 
 window.open(
-`https://wa.me/919358500110?text=${orderText}`,
+
+`https://wa.me/919358500110?text=${encodeURIComponent(text)}`,
+
 "_blank"
+
 );
 
 }
 
-// LOAD CART PAGE
 
-document.addEventListener(
-"DOMContentLoaded",
+// ======================
+// GOOGLE LOGIN
+// ======================
+
+function updateLoginButton(){
+
+const btn =
+document.getElementById(
+"loginBtn"
+);
+
+if(!btn)
+return;
+
+const logged =
+localStorage.getItem(
+"userLoggedIn"
+);
+
+if(logged==="true"){
+
+btn.innerHTML=
+"My Account";
+
+}
+
+}
+
+
+function handleCredentialResponse(){
+
+localStorage.setItem(
+"userLoggedIn",
+"true"
+);
+
+updateLoginButton();
+
+}
+
+
+window.addEventListener(
+
+"load",
+
 function(){
+
+updateLoginButton();
 
 renderCart();
 
 }
+
 );
+
+
+// ======================
+// LOGOUT
+// ======================
+
+function logout(){
+
+localStorage.removeItem(
+"userLoggedIn"
+);
+
+location.reload();
+
+}
