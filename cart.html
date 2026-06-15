@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Cart | Bikana Bites</title>
+
+<link rel="stylesheet"
+href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="top-logo">
+<img src="images/logo.png"
+alt="Bikana Bites">
+</div>
+
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="products.html">Products</a></li>
+<li><a href="about.html">About Us</a></li>
+<li><a href="distributor.html">Distributor</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+
+</header>
+
+<section
+style="padding:60px 10%;">
+
+<h1
+style="
+text-align:center;
+margin-bottom:40px;
+color:#c91c1c;">
+Shopping Cart
+</h1>
+
+<div id="cart-items">
+
+</div>
+
+<div
+style="
+text-align:center;
+margin-top:30px;">
+
+<h2>
+Total:
+<span id="total-price">
+₹0
+</span>
+</h2>
+
+<br>
+
+<button
+onclick="checkoutWhatsApp()"
+style="
+background:#25D366;
+color:white;
+padding:15px 30px;
+border:none;
+border-radius:30px;
+cursor:pointer;
+font-size:16px;">
+
+Checkout On WhatsApp
+
+</button>
+
+<br><br>
+
+<button
+onclick="clearCart()"
+style="
+background:#c91c1c;
+color:white;
+padding:15px 30px;
+border:none;
+border-radius:30px;
+cursor:pointer;
+font-size:16px;">
+
+Clear Cart
+
+</button>
+
+</div>
+
+</section>
+
+<footer>
+
+<h3>BIKANA BITES</h3>
+
+<p>
+WhatsApp:
++91 9358500110
+</p>
+
+<p>
+Email:
+bikanabites@gmail.com
+</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
