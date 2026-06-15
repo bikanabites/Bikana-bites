@@ -37,8 +37,8 @@ header{
     align-items:center;
 }
 .logo img{
-    height: 150px       /* पहले small था, अब बड़ा */
-    width: auto;
+    height: 300px     /* पहले small था, अब बड़ा */
+    width: 200px
     max-width: 220px;    /* limit हटने नहीं देंगे */
     object-fit: contain;
 }
