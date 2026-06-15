@@ -36,12 +36,21 @@ header{
     justify-content:space-between;
     align-items:center;
 }
-
-.logo-img{
-    width: 180px;   /* बड़ा करने के लिए */
-    height: auto;
+.logo img{
+    height: 70px;        /* पहले small था, अब बड़ा */
+    width: auto;
+    max-width: 220px;    /* limit हटने नहीं देंगे */
     object-fit: contain;
 }
+
+/* Navbar alignment fix */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+}
+
 }
 
 .nav-links{
