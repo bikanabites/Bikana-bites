@@ -1,205 +1,176 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BIKANA BITES | Har Dil Bole... BIKANA BITES</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Discover the authentic taste of BIKANA BITES. Premium quality namkeen crafted with tradition and love.">
+<title>BIKANA BITES | हर दिल बोले BIKANA BITES</title>
 
-    <link rel="stylesheet" href="style.css">
+<meta name="description" content="BIKANA BITES - Premium Namkeen & Snacks. हर दिल बोले BIKANA BITES">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Header -->
-    <header>
-        <nav class="navbar">
-
-            <div class="logo">
-    <img src="imageslogo.png" alt="BIKANA BITES Logo" class="logo-img">
+<div id="loader">
+<div class="loader-logo">BIKANA BITES</div>
 </div>
 
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+<header class="hero">
 
-        </nav>
-    </header>
+<div class="topbar">
+<a href="https://www.instagram.com/bikanabites" target="_blank">Instagram</a>
+<a href="https://www.facebook.com/share/18yJKhMRUz/" target="_blank">Facebook</a>
+</div>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
+<img src="logo.png" class="logo" alt="BIKANA BITES Logo">
 
-        <div class="hero-content">
+<h1>BIKANA BITES</h1>
 
-            <h1>Har Dil Bole...</h1>
+<p class="tagline">हर दिल बोले BIKANA BITES</p>
 
-            <h2>BIKANA BITES</h2>
+<input
+type="text"
+id="searchInput"
+placeholder="प्रोडक्ट खोजें..."
+onkeyup="searchProducts()">
 
-            <p>
-                Bringing the authentic taste of Bikaner to every home with premium quality and irresistible flavour.
-            </p>
+</header>
 
-            <a href="https://wa.me/919358500110"
-               class="btn"
-               target="_blank">
-               Order on WhatsApp
-            </a>
+<section class="products-section">
 
-        </div>
+<h2>Our Products</h2>
 
-    </section>
+<div class="products" id="products">
 
-    <!-- Products -->
-    <section class="products" id="products">
+<div class="product-card">
+<img src="khokha-bhujia.png" alt="Khokha Bhujia">
 
-        <div class="section-title">
-            <h2>Our Products</h2>
-            <p>Made with tradition, packed with taste.</p>
-        </div>
+<h3>Khokha Bhujia</h3>
 
-        <div class="product-grid">
+<p>₹10</p>
 
-            <div class="product-card">
+<div class="qty-box">
+<button onclick="changeQty(this,-1)">-</button>
+<span>1</span>
+<button onclick="changeQty(this,1)">+</button>
+</div>
 
-                <img src="imagesmoong-dal.png"
-                     alt="Moong Dal">
+<button
+class="cart-btn"
+onclick="addToCart('Khokha Bhujia',10,this)">
+Add To Cart
+</button>
 
-                <h3>Moong Dal</h3>
+</div>
 
-                <p>
-                    Crispy and delicious moong dal made with premium ingredients.
-                </p>
+<div class="product-card">
+<img src="moong-dal.png" alt="Moong Dal">
 
-            </div>
+<h3>Moong Dal</h3>
 
-            <div class="product-card">
+<p>₹10</p>
 
-                <img src="imageskhokha-bhujia.png"
-                     alt="Khokha Bhujia">
+<div class="qty-box">
+<button onclick="changeQty(this,-1)">-</button>
+<span>1</span>
+<button onclick="changeQty(this,1)">+</button>
+</div>
 
-                <h3>Khokha Bhujia</h3>
+<button
+class="cart-btn"
+onclick="addToCart('Moong Dal',10,this)">
+Add To Cart
+</button>
 
-                <p>
-                    Authentic Bikaneri taste with rich spices and crunchy texture.
-                </p>
+</div>
 
-            </div>
+</div>
 
-        </div>
+</section>
 
-    </section>
+<div class="cart-panel">
 
-    <!-- About -->
-    <section class="about" id="about">
+<h3>🛒 Cart</h3>
 
-        <div class="section-title">
-            <h2>About BIKANA BITES</h2>
-        </div>
+<p>Items: <span id="cartCount">0</span></p>
 
-        <p class="about-text">
+<p>Total: ₹<span id="cartTotal">0</span></p>
 
-            At BIKANA BITES, we believe that great taste begins with authenticity.
+<button class="buy-btn" onclick="checkoutWhatsapp()">
+Order On WhatsApp
+</button>
 
-            Inspired by the rich culinary heritage of Bikaner, our products are prepared with carefully selected ingredients, hygienic packaging, and an uncompromising commitment to quality.
+</div>
 
-            Every bite is crafted to bring joy to your family.
+<section class="about">
 
-        </p>
+<h2>About BIKANA BITES</h2>
 
-    </section>
+<p>
+राजस्थान के पारंपरिक स्वाद को आधुनिक गुणवत्ता के साथ आपके घर तक पहुँचाने का हमारा प्रयास।
+</p>
 
-    <!-- Why Choose Us -->
-    <section class="why-us">
+</section>
 
-        <div class="section-title">
-            <h2>Why Choose Us</h2>
-        </div>
+<section class="reviews">
 
-        <div class="features">
+<h2>Customer Reviews</h2>
 
-            <div class="feature-box">
-                <i class="fa-solid fa-award"></i>
-                <h3>Premium Quality</h3>
-            </div>
+<div class="review">
+★★★★★ स्वाद शानदार है।
+</div>
 
-            <div class="feature-box">
-                <i class="fa-solid fa-heart"></i>
-                <h3>Authentic Taste</h3>
-            </div>
+<div class="review">
+★★★★★ क्वालिटी बहुत बढ़िया।
+</div>
 
-            <div class="feature-box">
-                <i class="fa-solid fa-box"></i>
-                <h3>Hygienic Packaging</h3>
-            </div>
+</section>
 
-            <div class="feature-box">
-                <i class="fa-solid fa-star"></i>
-                <h3>Trusted Brand</h3>
-            </div>
+<section class="faq">
 
-        </div>
+<h2>FAQ</h2>
 
-    </section>
+<details>
+<summary>ऑर्डर कैसे करें?</summary>
+<p>कार्ट में प्रोडक्ट जोड़ें और WhatsApp बटन दबाएँ।</p>
+</details>
 
-    <!-- Contact -->
-    <section class="contact" id="contact">
+<details>
+<summary>डिस्ट्रीब्यूटर कैसे बनें?</summary>
+<p>Distributor Form भरें।</p>
+</details>
 
-        <div class="section-title">
-            <h2>Contact Us</h2>
-        </div>
+</section>
 
-        <div class="social-links">
+<footer>
 
-            <a href="https://www.instagram.com/bikanabites"
-               target="_blank">
-               <i class="fa-brands fa-instagram"></i>
-            </a>
+<h3>Contact</h3>
 
-            <a href="https://www.facebook.com/share/1BZALqN2HM/"
-               target="_blank">
-               <i class="fa-brands fa-facebook"></i>
-            </a>
+<p>WhatsApp: +91 93585 00110</p>
 
-            <a href="https://wa.me/919358500110"
-               target="_blank">
-               <i class="fa-brands fa-whatsapp"></i>
-            </a>
+<p>Email: bikanabites@gmail.com</p>
 
-        </div>
+<p>© BIKANA BITES</p>
 
-    </section>
+</footer>
 
-    <!-- Footer -->
-    <footer>
+<a
+href="https://wa.me/919358500110"
+target="_blank"
+class="floating-whatsapp">
+WhatsApp
+</a>
 
-        <p>
-            © 2026 BIKANA BITES. All Rights Reserved.
-        </p>
+<a
+href="https://docs.google.com/forms/d/e/1FAIpQLScxN6S3k9-yuBrrgm5EWKwWWtQI-8p-zU1EHZsdSPZreHEzlw/viewform"
+target="_blank"
+class="floating-form">
+Distributor Form
+</a>
 
-    </footer>
-
-    <!-- Floating WhatsApp -->
-    <a href="https://wa.me/919358500110"
-       class="floating-whatsapp"
-       target="_blank">
-
-       <i class="fa-brands fa-whatsapp"></i>
-
-    </a>
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
-<!-- Floating Distributor Button -->
-<a href="https://forms.gle/8GPiHrj9TsXEz1jW8" target="_blank" class="distributor-btn">
-    📦 Distributor Apply
-</a>
