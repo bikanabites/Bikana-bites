@@ -1,43 +1,11 @@
-// ======================
-// CART STORAGE
-// ======================
+// =====================
+// CART
+// =====================
 
 let cart =
 JSON.parse(
 localStorage.getItem("cart")
 ) || [];
-
-updateCartCount();
-
-
-// ======================
-// ADD TO CART
-// ======================
-
-function addToCart(name,price){
-
-cart.push({
-name,
-price
-});
-
-localStorage.setItem(
-"cart",
-JSON.stringify(cart)
-);
-
-updateCartCount();
-
-alert(
-name + " added to cart!"
-);
-
-}
-
-
-// ======================
-// CART COUNT
-// ======================
 
 function updateCartCount(){
 
@@ -55,170 +23,53 @@ cart.length;
 
 }
 
+updateCartCount();
 
-// ======================
-// BUY WHATSAPP
-// ======================
 
-function buyWhatsApp(product){
+// =====================
+// ADD
+// =====================
 
-const msg =
+function addToCart(
+name,
+price
+){
 
-`Hello Bikana Bites,
+cart.push({
+name,
+price
+});
+
+localStorage.setItem(
+"cart",
+JSON.stringify(cart)
+);
+
+updateCartCount();
+
+alert(
+name +
+" added to cart"
+);
+
+}
+
+
+// =====================
+// WHATSAPP BUY
+// =====================
+
+function buyWhatsApp(
+product
+){
+
+const text =
+
+`Hello Bikana Bites
 
 I want to order:
 
-${product}
-
-Please share details.`;
-
-window.open(
-
-`https://wa.me/919358500110?text=${encodeURIComponent(msg)}`,
-
-"_blank"
-
-);
-
-}
-
-
-// ======================
-// RENDER CART
-// ======================
-
-function renderCart(){
-
-const cartContainer =
-document.getElementById(
-"cart-items"
-);
-
-const totalElement =
-document.getElementById(
-"total-price"
-);
-
-if(!cartContainer)
-return;
-
-cartContainer.innerHTML="";
-
-let total=0;
-
-cart.forEach(
-(item,index)=>{
-
-total += item.price;
-
-cartContainer.innerHTML +=
-
-`
-<div class="cart-item">
-
-<h3>${item.name}</h3>
-
-<p>₹${item.price}</p>
-
-<button onclick="removeItem(${index})">
-Remove
-</button>
-
-</div>
-`;
-
-}
-);
-
-if(totalElement){
-
-totalElement.innerText=
-"₹"+total;
-
-}
-
-}
-
-
-// ======================
-// REMOVE
-// ======================
-
-function removeItem(index){
-
-cart.splice(index,1);
-
-localStorage.setItem(
-
-"cart",
-
-JSON.stringify(cart)
-
-);
-
-renderCart();
-
-updateCartCount();
-
-}
-
-
-// ======================
-// CLEAR CART
-// ======================
-
-function clearCart(){
-
-cart=[];
-
-localStorage.setItem(
-
-"cart",
-
-"[]"
-
-);
-
-renderCart();
-
-updateCartCount();
-
-}
-
-
-// ======================
-// CHECKOUT
-// ======================
-
-function checkoutWhatsApp(){
-
-if(cart.length===0){
-
-alert(
-"Cart is empty!"
-);
-
-return;
-
-}
-
-let text=
-
-"Hello Bikana Bites\n\nOrder:\n\n";
-
-let total=0;
-
-cart.forEach(item=>{
-
-text +=
-`${item.name} - ₹${item.price}\n`;
-
-total+=item.price;
-
-});
-
-text +=
-`\nTotal ₹${total}`;
+${product}`;
 
 window.open(
 
@@ -231,26 +82,189 @@ window.open(
 }
 
 
-// ======================
-// GOOGLE LOGIN
-// ======================
+// =====================
+// CART PAGE
+// =====================
 
-function updateLoginButton(){
+function renderCart(){
+
+const box =
+document.getElementById(
+"cart-items"
+);
+
+const total =
+document.getElementById(
+"total-price"
+);
+
+if(!box)
+return;
+
+box.innerHTML="";
+
+let amount=0;
+
+cart.forEach(
+(item,index)=>{
+
+amount+=
+item.price;
+
+box.innerHTML +=
+
+`
+<div class="cart-item">
+
+<h3>
+${item.name}
+</h3>
+
+<p>
+₹${item.price}
+</p>
+
+<button
+onclick=
+"removeItem(${index})">
+
+Remove
+
+</button>
+
+</div>
+`;
+
+}
+);
+
+if(total){
+
+total.innerText=
+"₹"+amount;
+
+}
+
+}
+
+
+// =====================
+// REMOVE
+// =====================
+
+function removeItem(
+index
+){
+
+cart.splice(
+index,
+1
+);
+
+localStorage.setItem(
+"cart",
+JSON.stringify(cart)
+);
+
+renderCart();
+
+updateCartCount();
+
+}
+
+
+// =====================
+// CLEAR
+// =====================
+
+function clearCart(){
+
+cart=[];
+
+localStorage.setItem(
+"cart",
+"[]"
+);
+
+renderCart();
+
+updateCartCount();
+
+}
+
+
+// =====================
+// CHECKOUT
+// =====================
+
+function checkoutWhatsApp(){
+
+if(
+cart.length===0
+){
+
+alert(
+"Cart empty"
+);
+
+return;
+
+}
+
+let msg =
+
+"Hello Bikana Bites\n\n";
+
+let total=0;
+
+cart.forEach(
+item=>{
+
+msg +=
+`${item.name}
+₹${item.price}\n`;
+
+total+=
+item.price;
+
+}
+);
+
+msg +=
+`\nTotal ₹${total}`;
+
+window.open(
+
+`https://wa.me/919358500110?text=${encodeURIComponent(msg)}`,
+
+"_blank"
+
+);
+
+}
+
+
+// =====================
+// LOGIN BUTTON
+// =====================
+
+function updateLogin(){
 
 const btn =
 document.getElementById(
 "loginBtn"
 );
 
-if(!btn)
+if(
+!btn
+)
 return;
 
-const logged =
+if(
 localStorage.getItem(
 "userLoggedIn"
-);
-
-if(logged==="true"){
+)==="true"
+){
 
 btn.innerHTML=
 "My Account";
@@ -259,7 +273,6 @@ btn.innerHTML=
 
 }
 
-
 function handleCredentialResponse(){
 
 localStorage.setItem(
@@ -267,36 +280,19 @@ localStorage.setItem(
 "true"
 );
 
-updateLoginButton();
+updateLogin();
 
 }
 
-
 window.addEventListener(
+"DOMContentLoaded",
+()=>{
 
-"load",
-
-function(){
-
-updateLoginButton();
+updateCartCount();
 
 renderCart();
 
-}
-
-);
-
-
-// ======================
-// LOGOUT
-// ======================
-
-function logout(){
-
-localStorage.removeItem(
-"userLoggedIn"
-);
-
-location.reload();
+updateLogin();
 
 }
+);
