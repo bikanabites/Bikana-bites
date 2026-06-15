@@ -118,40 +118,24 @@ gap:20px;
 padding:60px 10%;
 }
 
+..feature-card:nth-child(1){background:#D8EBFF;}
+.feature-card:nth-child(2){background:#D9F7E7;}
+.feature-card:nth-child(3){background:#FFEBC9;}
+.feature-card:nth-child(4){background:#E8D9FF;}
 .feature-card{
 padding:30px;
 text-align:center;
-
 border-radius:24px;
 
-/* Light modern gradient */
-background:linear-gradient(
-145deg,
-rgba(255,255,255,.9),
-rgba(248,248,248,.7)
-);
-
 box-shadow:
-0 10px 30px rgba(0,0,0,.06);
+0 12px 30px rgba(0,0,0,.08);
 
 transition:.3s ease;
 }
 
-/* Different soft colors */
-.feature-card:nth-child(1){
-background:#EEF5FF;
+.feature-card:hover{
+transform:translateY(-6px);
 }
-
-.feature-card:nth-child(2){
-background:#EEF9F2;
-}
-
-.feature-card:nth-child(3){
-background:#FFF6E8;
-}
-
-.feature-card:nth-child(4){
-background:#F6EEFF;
 }
 
 /* Hover effect */
