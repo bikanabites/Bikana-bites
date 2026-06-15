@@ -4,171 +4,51 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>BIKANA BITES | हर दिल बोले BIKANA BITES</title>
-
-<meta name="description" content="BIKANA BITES - Premium Namkeen & Snacks. हर दिल बोले BIKANA BITES">
+<title>BIKANA BITES</title>
 
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div id="loader">
-<div class="loader-logo">BIKANA BITES</div>
-</div>
+<header class="header">
+  <img src="logo.png" class="logo" alt="BIKANA BITES">
+  <h1>BIKANA BITES</h1>
+  <p>हर दिल बोले BIKANA BITES</p>
 
-<header class="hero">
-
-<div class="topbar">
-<a href="https://www.instagram.com/bikanabites" target="_blank">Instagram</a>
-<a href="https://www.facebook.com/share/18yJKhMRUz/" target="_blank">Facebook</a>
-</div>
-
-<img src="logo.png" class="logo" alt="BIKANA BITES Logo">
-
-<h1>BIKANA BITES</h1>
-
-<p class="tagline">हर दिल बोले BIKANA BITES</p>
-
-<input
-type="text"
-id="searchInput"
-placeholder="प्रोडक्ट खोजें..."
-onkeyup="searchProducts()">
-
+  <div class="links">
+    <a href="https://www.instagram.com/bikanabites" target="_blank">Instagram</a>
+    <a href="https://www.facebook.com/share/18yJKhMRUz/" target="_blank">Facebook</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScxN6S3k9-yuBrrgm5EWKwWWtQI-8p-zU1EHZsdSPZreHEzlw/viewform" target="_blank">Distributor Form</a>
+  </div>
 </header>
 
-<section class="products-section">
+<section class="products">
 
-<h2>Our Products</h2>
+  <div class="card">
+    <img src="khokha-bhujia.png" alt="Bhujia">
+    <h3>Khokha Bhujia</h3>
+    <p>₹10</p>
+    <button onclick="addToCart('Khokha Bhujia',10)">Add to Cart</button>
+  </div>
 
-<div class="products" id="products">
-
-<div class="product-card">
-<img src="khokha-bhujia.png" alt="Khokha Bhujia">
-
-<h3>Khokha Bhujia</h3>
-
-<p>₹10</p>
-
-<div class="qty-box">
-<button onclick="changeQty(this,-1)">-</button>
-<span>1</span>
-<button onclick="changeQty(this,1)">+</button>
-</div>
-
-<button
-class="cart-btn"
-onclick="addToCart('Khokha Bhujia',10,this)">
-Add To Cart
-</button>
-
-</div>
-
-<div class="product-card">
-<img src="moong-dal.png" alt="Moong Dal">
-
-<h3>Moong Dal</h3>
-
-<p>₹10</p>
-
-<div class="qty-box">
-<button onclick="changeQty(this,-1)">-</button>
-<span>1</span>
-<button onclick="changeQty(this,1)">+</button>
-</div>
-
-<button
-class="cart-btn"
-onclick="addToCart('Moong Dal',10,this)">
-Add To Cart
-</button>
-
-</div>
-
-</div>
+  <div class="card">
+    <img src="moong-dal.png" alt="Moong Dal">
+    <h3>Moong Dal</h3>
+    <p>₹10</p>
+    <button onclick="addToCart('Moong Dal',10)">Add to Cart</button>
+  </div>
 
 </section>
 
-<div class="cart-panel">
+<div class="cart">
+  <h3>Cart: <span id="count">0</span></h3>
+  <h3>Total: ₹<span id="total">0</span></h3>
 
-<h3>🛒 Cart</h3>
-
-<p>Items: <span id="cartCount">0</span></p>
-
-<p>Total: ₹<span id="cartTotal">0</span></p>
-
-<button class="buy-btn" onclick="checkoutWhatsapp()">
-Order On WhatsApp
-</button>
-
+  <button onclick="orderWhatsApp()">Order on WhatsApp</button>
 </div>
 
-<section class="about">
-
-<h2>About BIKANA BITES</h2>
-
-<p>
-राजस्थान के पारंपरिक स्वाद को आधुनिक गुणवत्ता के साथ आपके घर तक पहुँचाने का हमारा प्रयास।
-</p>
-
-</section>
-
-<section class="reviews">
-
-<h2>Customer Reviews</h2>
-
-<div class="review">
-★★★★★ स्वाद शानदार है।
-</div>
-
-<div class="review">
-★★★★★ क्वालिटी बहुत बढ़िया।
-</div>
-
-</section>
-
-<section class="faq">
-
-<h2>FAQ</h2>
-
-<details>
-<summary>ऑर्डर कैसे करें?</summary>
-<p>कार्ट में प्रोडक्ट जोड़ें और WhatsApp बटन दबाएँ।</p>
-</details>
-
-<details>
-<summary>डिस्ट्रीब्यूटर कैसे बनें?</summary>
-<p>Distributor Form भरें।</p>
-</details>
-
-</section>
-
-<footer>
-
-<h3>Contact</h3>
-
-<p>WhatsApp: +91 93585 00110</p>
-
-<p>Email: bikanabites@gmail.com</p>
-
-<p>© BIKANA BITES</p>
-
-</footer>
-
-<a
-href="https://wa.me/919358500110"
-target="_blank"
-class="floating-whatsapp">
-WhatsApp
-</a>
-
-<a
-href="https://docs.google.com/forms/d/e/1FAIpQLScxN6S3k9-yuBrrgm5EWKwWWtQI-8p-zU1EHZsdSPZreHEzlw/viewform"
-target="_blank"
-class="floating-form">
-Distributor Form
-</a>
+<a class="wa" href="https://wa.me/919358500110" target="_blank">WhatsApp</a>
 
 <script src="script.js"></script>
 
