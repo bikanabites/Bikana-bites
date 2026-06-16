@@ -479,3 +479,17 @@ font-size:18px;
 }
 
 }
+#music-btn{
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    z-index: 9999;
+    background: #d4af37;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
