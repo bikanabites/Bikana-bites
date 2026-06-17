@@ -484,17 +484,20 @@ font-size:18px;
     height:650px;
     overflow:hidden;
 }
-}
+
 @media(max-width:768px){
 
 .hero-banner{
-    height:auto;
+    height:450px;
 }
 
 .hero-banner img{
     width:100%;
-    height:auto;
-    object-fit:contain;
+    height:100%;
+    object-fit:cover;
+}
+
+}
 }
 
 }
