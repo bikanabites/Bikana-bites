@@ -481,7 +481,7 @@ font-size:18px;
 }
 .hero-banner{
     position:relative;
-    height:100vh;
+    height:650px;
     overflow:hidden;
 }
 
@@ -495,8 +495,10 @@ font-size:18px;
 .slider img{
     width:100%;
     height:100%;
-    object-fit:cover;
+    object-fit:contain;
     flex-shrink:0;
+    background:#000;
+}
 }
 
 .hero-overlay{
