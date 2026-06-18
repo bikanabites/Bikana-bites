@@ -121,12 +121,20 @@ color:white;
 /* FEATURES */
 
 .features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 15px;
+  display: flex;
+  flex-direction: column;   /* एक के नीचे एक */
+  align-items: center;
+  gap: 20px;
 }
-padding:40px 10%;
+
+.feature-box {
+  width: 220px;   /* छोटा size */
+  height: 120px;
+  padding: 15px;
+  border-radius: 15px;
+  text-align: center;
 }
+
 
 .feature-card{
 padding:25px 20px;
